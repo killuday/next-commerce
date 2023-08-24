@@ -23,23 +23,23 @@ function MyApp({ Component, pageProps }) {
   }, [])
   
   const saveCart=(myCart)=>{
-    localStorage.setItem("cart", myCart)
+    localStorage.setItem("cart", JSON.stringify(myCart))
     let subt=0;
     let keys=Object.keys(myCart)
     for(let i=0;  i<keys.length; i++){
-      subt+= myCart[keys[i]].price * myCart[keys[i]].qty;
+      subt+= myCart[keys[i]]['price'] * myCart[keys[i]].qty;
     }
     setSubTotal(subt)
 
   }
 
-  const addToCart=(itemCode, qty, price, name, size, varient)=>{
+  const addToCart=(itemCode, qty, price, name, size, variant)=>{
     let newCart=cart;
     if(itemCode in cart){
       newCart[itemCode].qty =cart[itemCode].qty + qty
     }else{
-      newCart[itemCode] ={qty: 1,price , name , size , varient}
-    }
+      newCart[itemCode] ={qty: 1,price , name , size , variant}
+    } 
     setCart(newCart)
     saveCart(newCart)
 
@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }) {
     setCart({})
     saveCart({})
   }
-  const removeFromCart=(itemCode, qty, price, name, size, varient)=>{ 
+  const removeFromCart=(itemCode, qty, price, name, size, variant)=>{ 
     let newCart=cart;
     if(itemCode in cart){
       newCart[itemCode].qty =cart[itemCode].qty - qty
@@ -57,7 +57,6 @@ function MyApp({ Component, pageProps }) {
     }
     setCart(newCart)
     saveCart(newCart)
-
   }
   return   <>
   <Navbar cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal}  />
