@@ -1,12 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
-
+import Image from 'next/image';
 
 const mugData = [
   {
     id: 1,
     name: "Classic Mug",
     price: 9.99,
+    category:"mugs",
     color: "White",
     imageUrl: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F02%2Fe7%2F02e7f05ce80da2b89c20b469fc4b82d319e95eac.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
   },
@@ -14,6 +15,7 @@ const mugData = [
     id: 2,
     name: "Colorful Mug",
     price: 12.99,
+    category:"mugs",
     color: "Blue",
     imageUrl: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F02%2Fe7%2F02e7f05ce80da2b89c20b469fc4b82d319e95eac.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
   },
@@ -21,6 +23,7 @@ const mugData = [
     id: 3,
     name: "Elegant Mug",
     price: 14.99,
+    category:"mugs",
     color: "Black",
     imageUrl: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F02%2Fe7%2F02e7f05ce80da2b89c20b469fc4b82d319e95eac.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
   },
@@ -28,6 +31,7 @@ const mugData = [
     id: 4,
     name: "Travel Mug",
     price: 18.99,
+    category:"mugs",
     color: "Silver",
     imageUrl: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F02%2Fe7%2F02e7f05ce80da2b89c20b469fc4b82d319e95eac.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
   },
@@ -35,6 +39,7 @@ const mugData = [
     id: 5,
     name: "Patterned Mug",
     price: 10.99,
+    category:"mugs",
     color: "Red",
     imageUrl: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F02%2Fe7%2F02e7f05ce80da2b89c20b469fc4b82d319e95eac.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
   },
@@ -42,6 +47,7 @@ const mugData = [
     id: 6,
     name: "Funny Mug",
     price: 8.99,
+    category:"mugs",
     color: "White",
     imageUrl: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F02%2Fe7%2F02e7f05ce80da2b89c20b469fc4b82d319e95eac.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
   },
@@ -49,6 +55,7 @@ const mugData = [
     id: 7,
     name: "Modern Mug",
     price: 16.99,
+    category:"mugs",
     color: "Green",
     imageUrl: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F02%2Fe7%2F02e7f05ce80da2b89c20b469fc4b82d319e95eac.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
   },
@@ -56,6 +63,7 @@ const mugData = [
     id: 8,
     name: "Personalized Mug",
     price: 13.99,
+    category:"mugs",
     color: "White",
     imageUrl: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F02%2Fe7%2F02e7f05ce80da2b89c20b469fc4b82d319e95eac.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
   },
@@ -76,12 +84,12 @@ const Mugs = () => {
                 <>
                   <div key={mug.id} className=" border shadow-xl rounded-xl ">
                     <div className="">
-                      <img src={mug.imageUrl} className="w-full hover:opacity-75 h-full object-contain rounded-t-xl " alt="" /> 
+                      <Image height={500} width={500} src={mug.imageUrl} className="w-full hover:opacity-75 h-full object-contain rounded-t-xl " alt="" /> 
                     </div>
                     <div className="flex justify-between p-5">
                       <div>
                       <h2>{mug.name}</h2>
-                      
+                      <p><small>{mug.category}</small></p>
                       <p className="truncate">{mug.colors}</p>
                       <p>{mug.sizes}</p>
                       </div>

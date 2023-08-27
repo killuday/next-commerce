@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-
+import Image from 'next/image'
 const Post = ({addToCart}) => {
   const router = useRouter()
   const { slug } = router.query
@@ -23,7 +23,7 @@ const Post = ({addToCart}) => {
   return <><section className="text-gray-600 body-font overflow-hidden">
   <div className="container px-5 py-16 mx-auto">
     <div className="lg:w-4/5 mx-auto flex flex-wrap">
-      <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto px-24 object-cover object-top rounded" src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Feb%2Ff8%2Febf8a4443d06abf07ac991765dd9758ed9121c25.jpg%5D%2Corigin%5Bdam%5D%2CT-Shirt%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" />
+      <Image  width={2000} height={1000} alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto px-24 object-cover object-top rounded" src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Feb%2Ff8%2Febf8a4443d06abf07ac991765dd9758ed9121c25.jpg%5D%2Corigin%5Bdam%5D%2CT-Shirt%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" />
       <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
         <h2 className="text-sm title-font text-gray-500 tracking-widest">H&M</h2>
         <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">Relaxed Fit T-Shirt</h1>

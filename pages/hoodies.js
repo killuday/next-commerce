@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-
+import Image from "next/image";
 const hoodieData = [
   {
     id: 1,
@@ -83,7 +83,10 @@ const Hoodies = () => {
                 <>
                   <div key={hoodie.id} className=" border shadow-xl rounded-xl ">
                     <div className="">
-                      <img src={hoodie.imageUrl} className="w-full hover:opacity-75 h-full object-contain rounded-t-xl " alt="" /> 
+                      <Image 
+                      width={500}
+                      height={500}
+                       src={hoodie.imageUrl} className="w-full hover:opacity-75 h-full object-contain rounded-t-xl " alt="" /> 
                     </div>
                     <div className="flex justify-between p-5">
                       <div>

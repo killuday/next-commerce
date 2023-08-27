@@ -7,5 +7,15 @@ module.exports = {
   theme: {
     extend: {},
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
   plugins: [],
 }

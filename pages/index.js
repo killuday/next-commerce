@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
      
       <div>
-        <img  src="/home1.jpg" alt="" />
+        <Image height={1000} width={2000}  src="/home1.jpg" alt="" />
       </div>
       <section className="text-gray-600 body-font">
   <div className="container px-5 py-24 mx-auto">
