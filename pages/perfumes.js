@@ -85,7 +85,7 @@ const Perfumes = () => {
     <>
         <section className="text-gray-600 body-font">
         <div className="container  px-5 py-24 mx-auto">
-          <div className="flex flex-wrap -m-4">
+          <div className="">
             <Link  href={"/product/relaxed-fit"}>
               <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 m-5 lg:grid-cols-4 xl:gap-x-8 ">
 
@@ -93,7 +93,7 @@ const Perfumes = () => {
                 <>
                   <div key={perfume.id} className=" border shadow-xl rounded-xl ">
                     <div className="">
-                      <Image width={500} height={500} 
+                      <Image width={700} height={500} 
                        src={perfume.imageUrl} className="w-full hover:opacity-75 h-full object-contain rounded-t-xl " alt="" /> 
                     </div>
                     <div className="flex justify-between p-5">

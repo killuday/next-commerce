@@ -10,6 +10,7 @@ import {
 import { BsFillBagCheckFill } from "react-icons/bs";
 
 const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
+  const ref = useRef();
   console.log(cart, addToCart, removeFromCart, clearCart, subTotal);
 
   const toggleCart = () => {
@@ -21,11 +22,11 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
       ref.current.classList.add("translate-x-full");
     }
   };
-  const ref = useRef();
+  
 
   return (
     <div>
-      <header className="text-gray-600 body-font  left-0 top-0 w-full z-10 bg-white ease-in duration-300">
+      <header className="text-gray-600  body-font  left-0 top-0 w-full z-10 bg-white ease-in duration-300">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
             <Link legacyBehavior href={"/"}>
@@ -63,7 +64,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
       </header>
       <div
         ref={ref}
-        className=" w-72 h-[100vh] z-10 sideCart absolute top-0  right-0 bg-pink-100 py-10 px-8 transform transition-transform translate-x-full"
+        className=" w-72 h-full z-10 sideCart absolute top-0  right-0 bg-pink-100 py-10 px-8 transform transition-transform translate-x-full"
       >
         <h1 className="font-bold text-xl text-center">Shopping cart</h1>
         <span
