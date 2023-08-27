@@ -30,14 +30,8 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
           <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
             <Link legacyBehavior href={"/"}>
               <Image height={100}
-              width={200}
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              width={200}             
                 className="w-10 h-10 text-white p-2 bg-pink-500 rounded-full"
-                viewBox="0 0 24 24"
                 src="/logo.png"
                 alt=""
               />
