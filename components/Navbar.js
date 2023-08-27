@@ -29,7 +29,8 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
             <Link legacyBehavior href={"/"}>
-              <img
+              <Image height={100}
+              width={200}
                 fill="none"
                 stroke="currentColor"
                 stroke-linecap="round"
