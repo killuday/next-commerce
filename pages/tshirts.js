@@ -9,7 +9,7 @@ const Tshirts = () => {
   const [data,setData]=useState([]);
   useEffect(() => {
     // Define the API endpoint
-    const apiUrl = 'http://localhost:3000/getallproducts';
+    const apiUrl = 'http://localhost:4000/getallproducts';
   
     // Fetch data from the API
     fetch(apiUrl)
