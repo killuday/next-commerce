@@ -9,7 +9,7 @@ const Tshirts = () => {
   const [data,setData]=useState([]);
   useEffect(() => {
     // Define the API endpoint
-    const apiUrl = 'http://localhost:4000/getallproducts';
+    const apiUrl = 'http://localhost:4000/api/getallproducts';
   
     // Fetch data from the API
     fetch(apiUrl)
@@ -47,8 +47,9 @@ const Tshirts = () => {
                       
                       <p className="truncate">{hoodie.color}</p>
                       <p>{hoodie.size}</p>
+                      <p>{hoodie.type}</p>
                       </div>
-                      <p>₹{hoodie.type}</p>
+                      <p>₹{hoodie.price}</p>
                     </div>
                   </div>
                 </>

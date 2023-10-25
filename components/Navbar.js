@@ -56,7 +56,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
           </nav>
           <div
             onClick={toggleCart}
-            className="cursor-pointer cart absolute right-0 top-6 mx-5"
+            className="cursor-pointer cart absolute right-0 top-6 "
           >
             <FaOpencart className="text-3xl" />
           </div>
@@ -64,7 +64,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
       </header>
       <div
         ref={ref}
-        className=" w-72 h-full z-10 sideCart absolute top-0  right-0 bg-pink-100 py-10 px-8 transform transition-transform translate-x-full"
+        className={ `w-72 h-full z-10 sideCart absolute top-0  right-0 bg-pink-100 py-10 px-8 transform transition-transform ${Object.keys(cart).length!==0 ? 'translate-x-0:' : 'translate-x-full'}`}
       >
         <h1 className="font-bold text-xl text-center">Shopping cart</h1>
         <span

@@ -3,6 +3,7 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import '../styles/globals.css'
 
+
 function MyApp({ Component, pageProps }) {
   const [cart, setCart] = useState({})
   const [subTotal, setSubTotal] = useState(0)
@@ -11,7 +12,7 @@ function MyApp({ Component, pageProps }) {
     try {
       if(localStorage.getItem("cart")){
         setCart(JSON.parse(localStorage.getItem("cart")))
-  
+        saveCart(JSON.parse(localStorage.getItem("cart")))
       }
       
     } catch (error) {
