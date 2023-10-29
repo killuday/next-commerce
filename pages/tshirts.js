@@ -44,10 +44,10 @@ const Tshirts = () => {
                     <div className="flex justify-between p-5">
                       <div>
                       <h2>{hoodie.name}</h2>
+                      <p className='font-light text-[13px]'>{hoodie.type}</p>
                       
                       <p className="truncate">{hoodie.color}</p>
                       <p>{hoodie.size}</p>
-                      <p>{hoodie.type}</p>
                       </div>
                       <p>₹{hoodie.price}</p>
                     </div>

@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
   const [cart, setCart] = useState({})
   const [subTotal, setSubTotal] = useState(0)
   useEffect(() => {
-    console.log("useEffect Hook")
+    // console.log("useEffect Hook")
     try {
       if(localStorage.getItem("cart")){
         setCart(JSON.parse(localStorage.getItem("cart")))
